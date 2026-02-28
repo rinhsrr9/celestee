@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jade Dynasty</title>
+
+<style>
+html{
+  scroll-behavior:smooth;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Times New Roman", serif;
+}
+
+body{
+  background:#ffffff;
+  color:#111;
+}
+
+/* STICKY NAVBAR */
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(255,255,255,0.95);
+}
+
+.logo{
+    font-size:28px;
+    letter-spacing:6px;
+}
+
+nav a{
+    margin-left:30px;
+    text-decoration:none;
+    color:#111;
+    font-size:14px;
+    letter-spacing:2px;
+}
+/* HERO PARALLAX */
+.hero{
+  height:100vh;
+  background:url("https://media.discordapp.net/attachments/938026195499491399/1477153276989411410/output.png?ex=69a3b9b1&is=69a26831&hm=d7e886e18524385e9e5859e6221f2a5fea9831f98378b1bf655f6805278591fe&=&format=webp&quality=lossless&width=825&height=455") center/cover fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#e7f0e4;
+}
+
+.hero h1{
+  font-size:64px;
+  letter-spacing:6px;
+  font-weight:300;
+  animation:fadeIn 1.5s ease forwards;
+}
+
+/* FADE-IN SCROLL EFFECT */
+.section{
+  padding:120px 70px;
+  text-align:center;
+  opacity:0;
+  transform:translateY(60px);
+  animation:fadeUp linear forwards;
+  animation-timeline:view();
+  animation-range:entry 20% cover 40%;
+}
+
+.section h2{
+  font-size:36px;
+  font-weight:300;
+  margin-bottom:18px;
+}
+
+/* IMAGE GRID WITH ZOOM ON SCROLL */
+.product-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:50px;
+}
+
+.card img{
+  width:80%;
+  height:500px;
+  object-fit:cover;
+  transform:scale(0.9);
+  opacity:0;
+  animation:zoomFade linear forwards;
+  animation-timeline:view();
+  animation-range:entry 20% cover 40%;
+}
+
+/* PARALLAX BANNER */
+.banner{
+  height:70vh;
+  background:url("https://cdn.discordapp.com/attachments/938026195499491399/1477154199429976137/output.png?ex=69a3ba8d&is=69a2690d&hm=afdda521f3f3a29de69a2b7565cbb1f9f20d503ea81f23ecb7746a86b3c14bda&") center/cover fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+
+.banner h2{
+  font-size:48px;
+  letter-spacing:5px;
+}
+
+/* FOOTER */
+footer{
+  padding:40px;
+  text-align:center;
+  border-top:1px solid #eee;
+  font-size:13px;
+  color:#777;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes zoomFade{
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">Céleste</div>
+    <nav>
+        <a href="doolii.html">Dolléria</a>
+        <a href="summer.html">Sunveil</a>
+        <a href="Jade.html">Jade Dynasty</a>
+        <a href="#">New</a>
+    </nav> 
+</header>
+<section class="hero">
+  <h1> 平  静  祥  和
+  </h1>
+</section>
+
+<section class="section">
+  <h2 >READY-TO-SHOW-OFF?</h2>
+
+  <div class="product-grid">
+
+        <div class="card">
+            <img src="chinese.jpg">
+            <h3>Jade Whisper</h3>
+            <p>$90</p>
+            <p>calm, graceful</p>
+            <a href="product copy j.html">Buy</a>
+            
+
+        </div>
+
+        <div class="card">
+            <img src="jade.jpg">
+            <h3>Lotus Veil</h3>
+            <p>$87</p>
+            <p>dreamy, romantic, and enchanting</p>
+            <a href="product copy jj.html">Buy</a>
+        </div>
+
+        <div class="card">
+            <img src="mirror.jpg">
+            <h3>Mulanfeng</h3>
+            <p>$50</p>
+            <a href="payment.html">Buy</a>
+        </div>
+
+    </div>
+</section>
+
+
+</body>
+</html>

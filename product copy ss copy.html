@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ANDROMEXA-buy</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#111;
+  background:#fff;
+}
+
+.container{
+  max-width:1400px;
+  margin:auto;
+  padding:40px 30px;
+}
+
+/* ===== LAYOUT ===== */
+.product{
+  display:grid;
+  grid-template-columns: 110px 1fr 440px;
+  gap:40px;
+}
+
+/* ===== THUMBNAILS ===== */
+.thumbs{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.thumbs img{
+  width:100%;
+  border:1px solid #eee;
+  transition:opacity .3s;
+  cursor:pointer;
+}
+
+.thumbs img:hover{
+  opacity:.6;
+}
+
+/* ===== MAIN IMAGE + ZOOM ===== */
+.main{
+  overflow:hidden;
+}
+
+.main img{
+  width:50%;
+  transition:transform .6s ease;
+}
+
+.main:hover img{
+  transform:scale(1.25);
+}
+
+/* ===== RIGHT PANEL ===== */
+.info{
+  position:sticky;
+  top:40px;
+  align-self:start;
+}
+
+.brand{
+  font-size:12px;
+  letter-spacing:3px;
+  margin-bottom:20px;
+}
+
+.title{
+  font-size:34px;
+  font-weight:500;
+  margin-bottom:12px;
+}
+
+.price{
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+/* ===== SIZE SELECTOR ===== */
+.sizes{
+  margin-bottom:30px;
+}
+
+.size-title{
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+.size-grid{
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+  gap:10px;
+}
+
+.size-grid div{
+  border:1px solid #111;
+  padding:10px 0;
+  text-align:center;
+  font-size:13px;
+  cursor:pointer;
+}
+
+.size-grid div:hover{
+  background:#111;
+  color:#fff;
+}
+
+/* ===== DESCRIPTION ===== */
+.desc{
+  font-size:15px;
+  line-height:1.6;
+  margin-bottom:25px;
+}
+
+/* ===== DETAILS ===== */
+.details{
+  list-style:none;
+  padding:0;
+  margin-bottom:35px;
+  font-size:14px;
+}
+
+.details li{
+  margin-bottom:8px;
+}
+
+/* ===== BUTTON ===== */
+.button{
+  display:block;
+  text-align:center;
+  padding:18px;
+  border:1px solid #111;
+  text-decoration:none;
+  color:#111;
+  letter-spacing:2px;
+  font-size:13px;
+}
+
+.button:hover{
+  background:#111;
+  color:#fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1000px){
+  .product{
+    grid-template-columns:1fr;
+  }
+  .thumbs{
+    flex-direction:row;
+  }
+  .info{
+    position:static;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="product">
+
+    <!-- THUMBNAILS -->
+    <div class="thumbs">
+      <img src="C:\Users\User\Desktop\uwuwuwuwuwu\perfume1.jpg">
+      <img src="C:\Users\User\Desktop\uwuwuwuwuwu\perfume 2.jpg">
+      <img src="C:\Users\User\Desktop\uwuwuwuwuwu\perfume3.jpg">
+      <img src="C:\Users\User\Desktop\uwuwuwuwuwu\perfume big.jpg">
+    </div>
+
+    <!-- MAIN IMAGE -->
+    <div class="main">
+      <img src="C:\Users\User\Desktop\uwuwuwuwuwu\c464282761098c587a620f520a0ff368.jpg">
+    </div>
+
+    <!-- RIGHT INFO -->
+    <div class="info">
+
+      <div class="brand">Céleste</div>
+
+      <div class="title">Grain De Soleil</div>
+
+      <div class="price">$180</div>
+
+      <!-- SIZE SELECTOR -->
+      <div class="sizes">
+        <div class="size-title">SIZE</div>
+        <div class="size-grid">
+          <div>1.5ml</div>
+          <div>3.6ml</div>
+          <div>5ml</div>
+          <div>10ml</div>
+        </div>
+      </div>
+
+      <div class="desc">
+        Full summer beach vibe!!
+      </div>
+
+      <ul class="details">
+        <li>Vanilla smell </li>
+        <li>Shell shaped</li>
+        <li>Silver-tone steel lining</li>
+        <li>Size — 60 ml</li>
+        <li>Made in France</li>
+      </ul>
+
+      <a href="payment.html" class="button">ADD TO BAG</a>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
